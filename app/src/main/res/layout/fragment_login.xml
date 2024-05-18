@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentRegistration"
+
+
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            style="@style/RegistrationCardViewStyle">
+            <EditText
+                android:id="@+id/log_login"
+                style="@style/EditTextOfRegistration"
+                android:hint="@string/hint_number"
+                android:inputType="text"
+                android:autofillHints="username"/>
+        </androidx.cardview.widget.CardView>
+
+        <View style="@style/VerticalSpacingStyle"/>
+
+        <androidx.cardview.widget.CardView
+            style="@style/RegistrationCardViewStyle">
+            <EditText
+                android:id="@+id/log_pass"
+                style="@style/EditTextOfRegistration"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:autofillHints="password"/>
+        </androidx.cardview.widget.CardView>
+
+        <View style="@style/VerticalSpacingStyle"/>
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/checkBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="20sp"-->
+<!--            android:text="@string/keep_logged_text" />-->
+
+<!--        <View style="@style/VerticalSpacingStyle"/>-->
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            style="@style/RegistrationButtonStyle"
+            android:text="@string/btn_signUp" />
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
