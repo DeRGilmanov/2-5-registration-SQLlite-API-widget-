@@ -25,6 +25,8 @@ import com.bumptech.glide.request.transition.Transition;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 /**
  * Implementation of App Widget functionality.
  */
@@ -205,7 +207,7 @@ public class Weather extends AppWidgetProvider {
                     public void onLoadCleared(@Nullable Drawable placeholder) {
                     }
                 });
-
+        remoteViews.setTextViewText(R.id.last_update_time, Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + ":" + Calendar.getInstance().get(Calendar.MINUTE) + ":" + Calendar.getInstance().get(Calendar.SECOND));
         // Обновляем виджет
         appWidgetManager.updateAppWidget(thisWidget, remoteViews);
     }
